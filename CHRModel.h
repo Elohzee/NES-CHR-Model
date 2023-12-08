@@ -4,8 +4,6 @@
 #include <windows.h>
 #include <fstream>
 #include <vector>
-
-#include "CHRModel.h"
 #define NOT_FOUND -2
 
 
@@ -140,7 +138,7 @@ public:
 
 		//if we don't use an fstream to read/write, and just try to write
 		//it would delete all the PRG data from a rom
-		std::fstream Output(filename, std::ios::binary | std::ios::in | std::ios::out);
+		std::fstream Output(filename, std::ios::binary | std::ios::in | std::ios::out | std::ios::trunc);
 
 		//bypass the PRG ROM
 		Output.seekp(prgPad);
