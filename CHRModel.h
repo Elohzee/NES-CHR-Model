@@ -4,6 +4,8 @@
 #include <windows.h>
 #include <fstream>
 #include <vector>
+
+#include "CHRModel.h"
 #define NOT_FOUND -2
 
 
@@ -29,10 +31,15 @@ public:
 	CHRModel()
 	{
 		//default constructor makes blank 4kb CHR
-		IndexArr.resize(16384);
 		size = 4096;
+		IndexArr.resize(16384);
 	}
-
+	CHRModel(int sizeinBytes)
+	{
+		//this allows for custom sized CHR
+		size = sizeinBytes;
+		IndexArr.resize(size * 4);	
+	}
 	CHRModel(const std::string& filename)
 	{
 		//this constructor accepts an std::string and is the main
