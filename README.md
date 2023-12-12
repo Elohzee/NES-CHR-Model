@@ -11,14 +11,15 @@ To load a CHR Model, you will need to create a CHRModel object. It will default 
 #include "CHRModel.h"
 
 CHRModel blankCHR; //creates a blank 4kb CHR
+CHRModel 8kbCHR = CHRModel(8192);
 CHRModel lozCHR = CHRModel("Legend_Of_Zelda.chr"); //opens existing CHR
 
 int main()
 {
   lozCHR.WritePixel(133, 46, 2); //writes index of 2 to (133, 46)
   lozCHR.SaveCHR("Legend_Of_Zelda.chr"); //saves to Legend_Of_Zelda.chr;
-  blankCHR.WritePixl(60, 90, 3); //writes index of 3 to (60, 90)
-  blankCHR.SaveCHR("new.chr"); //creates a new file called "new.chr" and saves the CHR data there
+  8kbCHR.WritePixle(60, 90, 3); //writes index of 3 to (60, 90)
+  8kbCHR.SaveCHR("new.chr"); //creates a new file called "new.chr" and saves the CHR data there
   return 0;
 }
 ```
