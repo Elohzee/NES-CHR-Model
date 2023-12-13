@@ -4,8 +4,6 @@
 #include <windows.h>
 #include <fstream>
 #include <vector>
-
-#include "CHRModel.h"
 #define NOT_FOUND -2
 
 
