@@ -4,7 +4,7 @@ This library is an offshoot project from my all in one NES ROM hacking program. 
 
 ## Usage
 
-To load a CHR Model, you will need to create a CHRModel object. It will default to a new 4kb CHR. However, you can provide it with access to to external files by passing a string into the constructor upon creation. The CHR data will be automatically loaded when the object is created. Index (0-3) refers to which of the NES' 4 available colors is intended to be displayed. You can use WritePixel(x, y, index); to write an individual pixel to the index array. When writing, keep in mind that NES CHR is always 128px wide, so that is the maximum x value. If you exceed this, it will simply wrap to the next row. You can save the file with SaveCHR(filename); which will output the index array to the file that is passed through (as string). You can load and edit both  *.chr  and *.nes ROM files.
+To load a CHR Model, you will need to create a CHRModel object. It will default to a new 4kb CHR. However, you can provide it with access to external files by passing a string into the constructor upon creation. The CHR data will be automatically loaded when the object is created. Index (0-3) refers to which of the NES' 4 available colors is intended to be displayed. You can use WritePixel(x, y, index); to write an individual pixel to the index array. When writing, keep in mind that NES CHR is always 128px wide, so that is the maximum x value. If you exceed this, it will simply wrap to the next row. You can save the file with SaveCHR(filename); which will output the index array to the file that is passed through (as string). You can load and edit both  *.chr  and *.nes ROM files.
 
 ## Example:
 ```C++
