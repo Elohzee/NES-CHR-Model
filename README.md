@@ -18,7 +18,7 @@ int main()
 {
   lozCHR.WritePixel(133, 46, 2); //writes index of 2 to (133, 46)
   lozCHR.SaveCHR("Legend_Of_Zelda.chr"); //saves to Legend_Of_Zelda.chr;
-  8kbCHR.WritePixle(60, 90, 3); //writes index of 3 to (60, 90)
+  8kbCHR.WritePixel(60, 90, 3); //writes index of 3 to (60, 90)
   8kbCHR.SaveCHR("new.chr"); //creates a new file called "new.chr" and saves the CHR data there
   return 0;
 }
